@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const MAX_SPEED = 120
+const MAX_SPEED = 90
 const ACCELERATION_SMOOTHING = 25
 
 @onready var damage_interval_timer = $DamageIntervalTimer
@@ -30,15 +30,20 @@ func _process(delta):
 	move_and_slide()
 	
 	if movement_vector.x != 0 || movement_vector.y !=0:
-		animation_player.play("walk")
+		animation_player.play("knight_walk")
 	else:
-		animation_player.play("RESET")
+		animation_player.play("knight_idle")
+	
+	if movement_vector.x < 0:
+		visuals.scale.x = -1
+	elif  movement_vector.x > 0:
+		visuals.scale.x = 1
 		
-	var move_sign =  sign(movement_vector.x)
-	if move_sign == 0:
-		visuals.scale = Vector2.ONE
-	else:
-		visuals.scale = Vector2(move_sign, 1)
+	#var move_sign =  sign(movement_vector.x)
+	#if move_sign == 0:
+		#visuals.scale = Vector2.ONE
+	#else:
+		#visuals.scale = Vector2(move_sign, 1)
 	
 
 func get_movement_vector():

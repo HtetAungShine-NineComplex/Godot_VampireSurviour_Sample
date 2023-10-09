@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ig5aib5xvg6u"
-path="res://.godot/imported/axe.png-d9061886615e248b8d314bf004885af3.ctex"
+uid="uid://i2vslkqpp5rh"
+path="res://.godot/imported/flask_blue.png-bd84fd4a2f2998117b38ed8f0507132e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/ability/axe_ability/axe.png"
-dest_files=["res://.godot/imported/axe.png-d9061886615e248b8d314bf004885af3.ctex"]
+source_file="res://scenes/game_object/experienc_vial/flask_blue.png"
+dest_files=["res://.godot/imported/flask_blue.png-bd84fd4a2f2998117b38ed8f0507132e.ctex"]
 
 [params]
 

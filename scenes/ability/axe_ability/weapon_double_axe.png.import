@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gmro5nlimu0g"
-path="res://.godot/imported/tile_0124.png-a6cd1559e89a50e5f7f2dd36a158d25d.ctex"
+uid="uid://be37lukpm4hn1"
+path="res://.godot/imported/weapon_double_axe.png-b3d5b9a515ab191edc754ebec55549f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game_object/basic_enemy/tile_0124.png"
-dest_files=["res://.godot/imported/tile_0124.png-a6cd1559e89a50e5f7f2dd36a158d25d.ctex"]
+source_file="res://scenes/ability/axe_ability/weapon_double_axe.png"
+dest_files=["res://.godot/imported/weapon_double_axe.png-b3d5b9a515ab191edc754ebec55549f7.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cncvj4pth03bp"]
+[gd_scene load_steps=15 format=3 uid="uid://cncvj4pth03bp"]
 
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_hpfck"]
 [ext_resource type="PackedScene" uid="uid://74uvqt7m2dbb" path="res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn" id="2_upak3"]
 [ext_resource type="PackedScene" uid="uid://geupph3b70sy" path="res://scenes/component/health_component.tscn" id="2_wqcd6"]
-[ext_resource type="Texture2D" uid="uid://b60ykdt787x7i" path="res://scenes/game_object/player/player.png" id="3_bu8q4"]
+[ext_resource type="Texture2D" uid="uid://dadebjpysqwun" path="res://assets/animation/knight_anim/knight.png" id="4_w10k0"]
 
 [sub_resource type="Animation" id="Animation_oixco"]
 length = 0.001
@@ -42,6 +42,40 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_proki"]
+resource_name = "knight_idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_mdbim"]
+resource_name = "knight_walk"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_0ulas"]
@@ -88,6 +122,8 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w2hxm"]
 _data = {
 "RESET": SubResource("Animation_oixco"),
+"knight_idle": SubResource("Animation_proki"),
+"knight_walk": SubResource("Animation_mdbim"),
 "walk": SubResource("Animation_0ulas")
 }
 
@@ -156,8 +192,11 @@ shape = SubResource("CircleShape2D_ur1m2")
 [node name="Visuals" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
-texture = ExtResource("3_bu8q4")
+texture = ExtResource("4_w10k0")
 offset = Vector2(0, -8)
+hframes = 4
+vframes = 2
+frame = 4
 
 [node name="CollisionArea2D" type="Area2D" parent="."]
 visible = false

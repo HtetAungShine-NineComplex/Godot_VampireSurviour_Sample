@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b15t354bo7rx0"]
 
-[ext_resource type="Texture2D" uid="uid://ig5aib5xvg6u" path="res://scenes/ability/axe_ability/axe.png" id="1_aeib5"]
 [ext_resource type="Script" path="res://scenes/ability/axe_ability/axe_ability.gd" id="1_hxddj"]
+[ext_resource type="Texture2D" uid="uid://be37lukpm4hn1" path="res://scenes/ability/axe_ability/weapon_double_axe.png" id="2_ngwhg"]
 [ext_resource type="PackedScene" uid="uid://b6oht3c0j14wr" path="res://scenes/component/hit_box_component.tscn" id="3_ljlar"]
 
 [sub_resource type="Animation" id="Animation_r1s7s"]
@@ -54,7 +54,9 @@ libraries = {
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_aeib5")
+position = Vector2(-2.98023e-08, 1)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ngwhg")
 
 [node name="HitBoxComponent" parent="." instance=ExtResource("3_ljlar")]
 
